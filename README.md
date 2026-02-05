@@ -2,8 +2,6 @@
 
 This is a local AI agent I built to handle various operations tasks. It's designed with a multi-agent architecture (Planner → Executor → Verifier) to break down complex natural language requests into actionable steps.
 
-Instead of just hallucinating answers, this assistant actually goes out and fetches real-time data using several integrated tools.
-
 ## How It Works
 
 The system operates in a loop:
@@ -24,8 +22,22 @@ The system operates in a loop:
 ## Setup & Running
 
 1.  **Install Dependencies**
-    I used `uv` for package management, but standard pip works too.
+
+    **Using uv (Recommended for speed)**
     ```bash
+    # Create a virtual environment and install dependencies
+    uv venv
+    source .venv/bin/activate
+    uv pip install -r requirements.txt
+    ```
+
+    **Using pip**
+    ```bash
+    # Create a virtual environment
+    python -m venv .venv
+    source .venv/bin/activate
+    
+    # Install dependencies
     pip install -r requirements.txt
     ```
 
@@ -39,6 +51,13 @@ The system operates in a loop:
 
 3.  **Run the App**
     The interface is built with Streamlit.
+    
+    **Using uv**
+    ```bash
+    uv run streamlit run main.py
+    ```
+
+    **Using standard streamlit**
     ```bash
     streamlit run main.py
     ```
