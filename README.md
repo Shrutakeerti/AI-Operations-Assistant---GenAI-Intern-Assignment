@@ -32,8 +32,9 @@ The system operates in a loop:
 2.  **Environment Variables**
     You'll need a `.env` file in the root directory. I've included a `.env.example` you can copy.
     ```ini
-    GROQ_API_KEY=your_groq_key_here
-    NEWS_API_KEY=your_newsapi_key_here
+    GROQ_API_KEY=<your-groq-api-key>
+    GROQ_MODEL_NAME="llama-3.1-8b-instant"
+    NEWS_API_KEY=2ed3d82045cd4c36861f956022f5370d
     ```
 
 3.  **Run the App**
